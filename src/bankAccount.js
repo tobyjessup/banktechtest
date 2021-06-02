@@ -3,13 +3,16 @@
 class BankAccount{
     constructor() {
 
-    this.DEFAULT_BALANCE = 0
+    this.balance = 0
 
     };
 
+deposit(amount){
+    this.balance += amount
+};
 
 getCurrentBalance(){
-    return this.DEFAULT_BALANCE;
+    return this.balance;
 };
 
 }

@@ -2,6 +2,8 @@
 
 describe("BankAccount", function(){
     let bankAccount;
+    var depositAmount = 1000
+    // let currentBalance;
   
     beforeEach(function(){
       bankAccount = new BankAccount;
@@ -12,11 +14,15 @@ describe("BankAccount", function(){
     });
 
     it("account has a starting balance of 0", function(){
-        expect(bankAccount.getDefaultBalance()).toEqual(0)
+        expect(bankAccount.balance).toEqual(0)
       });
 
+    it("can take deposits", function(){
+        expect(bankAccount.deposit(depositAmount)).toEqual(this.balance)
+    });
+
     it("shows current balance", function(){
-        expect(bankaccount.getCurrentBalance()).toEqual(currentBalance)
+        expect(bankAccount.getCurrentBalance()).toEqual(0)
     });
 
     });
