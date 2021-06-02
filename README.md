@@ -6,7 +6,7 @@ I am working solo to solve a typical bank tech test.
 
 ## How to use?
 
-* Clone this repo, in terminal enter - git clone https://github.com/tobyjessup/banktechtest.git
+* Clone this repo, in terminal enter - git clone git@github.com:tobyjessup/banktechtest.git
 * Then in terminal - cd banktechtest
 * Again in terminal - bundle install
 
