@@ -3,9 +3,10 @@
 class Transaction{
 
 
-    constructor(date = new getDate().toLocaleDateString(), amount){
+    constructor(date = new getDate().toLocaleDateString(), amount, balance){
         this.date = date
         this.amount = amount
+        this.balance = balance
     };
 
     getDate(){
@@ -15,5 +16,9 @@ class Transaction{
 
     getAmount(){
         return this.amount;
+    };
+
+    getBalance(){
+        return this.balance;
     };
 };
