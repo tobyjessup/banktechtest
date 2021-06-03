@@ -2,8 +2,10 @@
 
 describe("BankAccount", function(){
     let bankAccount;
+    var balance = this.balance
     var depositAmount = 1000
     var withdrawalAmount = 1000
+    var date = new Date().toLocaleDateString()
   
     beforeEach(function(){
       bankAccount = new BankAccount;
@@ -22,11 +24,16 @@ describe("BankAccount", function(){
     });
 
     it("can take deposits", function(){
-        expect(bankAccount.deposit(depositAmount)).toEqual(this.balance)
+        expect(bankAccount.deposit(depositAmount)).toEqual(balance)
     });
 
     it("can make withdrawals", function(){
-        expect(bankAccount.withdraw(withdrawalAmount)).toEqual(this.balance)
+        expect(bankAccount.withdraw(withdrawalAmount)).toEqual(balance)
     });
+
+    it("can print statement history", function(){
+        bankAccount.deposit(550)
+        expect(bankAccount.transactions).toEqual([date, "+550", 550])
+    })
 
     });

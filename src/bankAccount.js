@@ -1,23 +1,35 @@
 'use strict'
+function BankAccount() {
+    this.balance = 0;
+    this.transactions = [];
+  }
 
-class BankAccount{
-    constructor() {
-    this.balance = 0
-
-    };
-
-getCurrentBalance(){
+  BankAccount.prototype.getCurrentBalance = function () {
     return this.balance;
-};
+  };
 
-deposit(amount){
+  BankAccount.prototype.getDate = function () {
+    this.date
+    this.transactions.push(date);
+  };
+
+  BankAccount.prototype.deposit = function (amount, date, balance) {
     this.balance += amount
-};
+    this.transactions.push(new Date().toLocaleDateString());
+    this.transactions.push('+' + amount);
+    this.transactions.push(this.balance)
+  };
 
-withdraw(amount){
+  BankAccount.prototype.withdraw = function (amount, date, balance) {
     this.balance -= amount
+    this.transactions.push(new Date().toLocaleDateString());
+    this.transactions.push('-' + amount);
+    this.transactions.push(this.balance)
+  };
+
+  BankAccount.prototype.getAllTransactions = function () {
+    this.transactions.forEach(function (transaction) {
+        console.log(transaction);
+  })
+  
 };
-
-
-
-}
