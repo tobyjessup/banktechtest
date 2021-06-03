@@ -3,7 +3,7 @@
 describe("BankAccount", function(){
     let bankAccount;
     var depositAmount = 1000
-    // let currentBalance;
+    var withdrawalAmount = 1000
   
     beforeEach(function(){
       bankAccount = new BankAccount;
@@ -17,12 +17,16 @@ describe("BankAccount", function(){
         expect(bankAccount.balance).toEqual(0)
       });
 
+    it("shows current balance", function(){
+        expect(bankAccount.getCurrentBalance()).toEqual(0)
+    });
+
     it("can take deposits", function(){
         expect(bankAccount.deposit(depositAmount)).toEqual(this.balance)
     });
 
-    it("shows current balance", function(){
-        expect(bankAccount.getCurrentBalance()).toEqual(0)
+    it("can make withdrawals", function(){
+        expect(bankAccount.withdraw(withdrawalAmount)).toEqual(this.balance)
     });
 
     });

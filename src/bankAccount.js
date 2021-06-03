@@ -7,12 +7,16 @@ class BankAccount{
 
     };
 
+getCurrentBalance(){
+    return this.balance;
+};
+
 deposit(amount){
     this.balance += amount
 };
 
-getCurrentBalance(){
-    return this.balance;
+withdraw(amount){
+    this.balance -= amount
 };
 
 }
